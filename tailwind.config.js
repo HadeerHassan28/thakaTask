@@ -11,13 +11,13 @@ module.exports = {
         DEFAULT: "15px",
       },
     },
-    // screens: {
-    //   xs: "320px",
-    //   sm: "640px",
-    //   md: "768px",
-    //   lg: "960px",
-    //   xl: "1200px",
-    // },
+    screens: {
+      xs: "320px",
+      sm: "640px",
+      md: "768px",
+      lg: "960px",
+      xl: "1200px",
+    },
     extend: {
       colors: {
         primary: "#00ABAD",

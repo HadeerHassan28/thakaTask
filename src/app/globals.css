@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 :root {
+  --primary: #00abad;
+  --secondary: #d0d0d2;
+  --mainText: #12151c;
+  --title: #28649c;
+  --bgFooter: #cceeef;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,21 +1,60 @@
+import { color } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 import { FaEarthAmericas } from "react-icons/fa6";
 const NavBar = () => {
+  const menu = [
+    {
+      id: 1,
+      name: "الرئيسية",
+    },
+    {
+      id: 2,
+      name: "من نحن",
+    },
+    {
+      id: 3,
+      name: "أعمالنا",
+    },
+    {
+      id: 4,
+      name: "خدماتنا",
+    },
+    {
+      id: 5,
+      name: "تواصل معنا",
+    },
+    {
+      id: 6,
+      name: "وظائف",
+    },
+    {
+      id: 7,
+      name: "مدونة",
+    },
+  ];
   return (
     <div className="flex justify-around items-center border-b border-b-secondary relative text-base">
       <Image src="/logo.png" width={104} height={56} alt="logo" />
       <div className="flex justify-between gap-4 items-center text-mainText ">
-        <p className="text-primary relative ">
-          الرئيسية
-          <span className="absolute bottom-0 left-0 w-full h-1 bg-primary"></span>
-        </p>
-        <p>من نحن</p>
-        <p>أعمالنا</p>
-        <p>خدماتنا</p>
-        <p>تواصل معنا</p>
-        <p>وظائف</p>
-        <p>مدونة</p>
+        {menu.map((ele) => (
+          <div className="relative">
+            <p
+              style={{
+                color: ele.id === 1 ? "var(--primary)" : "var(--mainText)",
+              }}
+            >
+              {ele.name}
+            </p>
+
+            <span
+              style={{
+                background: ele.id === 1 ? "var(--primary)" : null,
+              }}
+              className="absolute top-9 right-0 w-12 h-1"
+            ></span>
+          </div>
+        ))}
       </div>
 
       <button className="flex  justify-around items-center gap-2  border border-b-secondary border-1 p-2 rounded">
