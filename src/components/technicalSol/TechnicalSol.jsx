@@ -24,12 +24,12 @@ const TechnicalSol = () => {
     {
       id: 4,
       img: "/laptop-shield.png",
-      title: "حلول الحماية",
+      title: "حلول الحماية والآمن السيرابني",
       dec: "تمتع بحماية قوية ضد الاختراقات والمخترقين الذين يحاولون تعطيل أعمالك مع حلول ذكاء للأمن السيبراني.",
     },
   ];
   return (
-    <div className="p-16 bg-bgFooter flex flex-col justify-around gap-5">
+    <div className=" p-24 bg-bgFooter flex flex-col justify-around gap-5">
       <h5 className="text-title text-lg font-semibold">حلول تقنية</h5>
       <p className="text-sm font-normal text-mainText ">
         يمكننا مساعدتك في تخطيط وتصميم وتطوير أي نوع من المنتجات الرقمية.
