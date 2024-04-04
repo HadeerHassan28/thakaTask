@@ -14,7 +14,7 @@ const About = () => {
           الرقمي في أداء القطاعين العام والخاص وللمساهمة في رفع مستوى الخدمات
           بإستخدام تقنية المعلومات
         </p>
-        <button className="text-primary border p-2 rounded  w-28 hover:bg-primary hover:text-white transition duration-300">
+        <button className="text-primary border p-2 rounded  w-28 shadow-md hover:bg-primary hover:text-white transition duration-300">
           معرفة المزيد
         </button>
       </div>
@@ -22,7 +22,7 @@ const About = () => {
         <Image
           src="/about.jpeg"
           alt="Image"
-          className="w-full"
+          className="w-full rounded"
           width={594}
           height={413.6}
         />
