@@ -3,8 +3,8 @@ import React from "react";
 import { FaEarthAmericas } from "react-icons/fa6";
 const NavBar = () => {
   return (
-    <div className="flex  justify-around items-center border border-b-secondary       relative text-base">
-      <Image src="/logo.png" width={104} height={56} />
+    <div className="flex justify-around items-center border-b border-b-secondary relative text-base">
+      <Image src="/logo.png" width={104} height={56} alt="logo" />
       <div className="flex justify-between gap-4 items-center text-mainText ">
         <p className="text-primary relative ">
           الرئيسية

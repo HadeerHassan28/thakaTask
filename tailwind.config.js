@@ -11,19 +11,20 @@ module.exports = {
         DEFAULT: "15px",
       },
     },
-    screens: {
-      xs: "320px",
-      sm: "640px",
-      md: "768px",
-      lg: "960px",
-      xl: "1200px",
-    },
+    // screens: {
+    //   xs: "320px",
+    //   sm: "640px",
+    //   md: "768px",
+    //   lg: "960px",
+    //   xl: "1200px",
+    // },
     extend: {
       colors: {
         primary: "#00ABAD",
         secondary: "#D0D0D2",
         mainText: "#12151C",
         title: "#28649C",
+        bgFooter: "#CCEEEF",
       },
 
       animation: {
@@ -37,10 +38,6 @@ module.exports = {
       },
     },
   },
-  container: {
-    padding: {
-      DEFAULT: "15px",
-    },
-  },
+
   plugins: [],
 };

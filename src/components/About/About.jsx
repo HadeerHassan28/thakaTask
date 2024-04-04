@@ -4,9 +4,9 @@ import React from "react";
 const About = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 p-16">
-      <div className="lg:col-span-3 flex  flex-col  i justify-around">
+      <div className="lg:col-span-3 flex  flex-col   justify-around">
         <h5 className="text-title text-lg font-semibold">من نحن</h5>
-        <p className="text-sm font-normal ">
+        <p className="text-sm font-normal text-mainText   text-justify ">
           بدأت رحلتنا في «ذكاء لتقنية المعلومات» باتجاه التطور والاكتشاف. لنقود
           الأفكار نحو التطور وتوليد الفرص ونساهم في وضع حلول ابتكارية للتعامل مع
           التحديات في مجال التقنية ونكون أصحاب الريادة لتطوير الخدمات عبر تقديم
