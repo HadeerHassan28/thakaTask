@@ -5,10 +5,15 @@ import Card from "./Card/Card";
 const HowWork = () => {
   return (
     <div
-      className="p-24 bg-center bg-cover"
+      className="p-24  bg-centre bg-cover"
       style={{ backgroundImage: 'url("/howWorkBg.png")' }}
     >
-      <h5 className="text-title text-lg font-semibold">كيف نعمل</h5>
+      <h5
+        className="text-title text-lg font-semibold"
+        style={{ fontSize: 18, fontWeight: 700 }}
+      >
+        كيف نعمل
+      </h5>
       <div>
         {howWorkData.map((ele) => (
           <Card

@@ -61,17 +61,13 @@
   animation: fadeInImage 0.5s forwards;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .textTitle {
+  .textTitle,
+  .text,
+  .btn {
     animation: none;
   }
 
-  .text {
-    animation: none;
-  }
   .imgContainer {
     display: none;
-  }
-  .btn {
-    animation: none;
   }
 }
