@@ -1,0 +1,11 @@
+.container {
+  height: 258px;
+  width: 288px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .container {
+    height: calc(258px / 2);
+    width: calc(288px / 2);
+  }
+}

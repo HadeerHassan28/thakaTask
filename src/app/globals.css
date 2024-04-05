@@ -9,14 +9,11 @@
   --title: #28649c;
   --bgFooter: #cceeef;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 body {
-}
-
-@layer utilities {
+  max-height: 1000vh;
 }

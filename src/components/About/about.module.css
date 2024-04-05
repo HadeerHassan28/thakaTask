@@ -71,4 +71,7 @@
   .imgContainer {
     display: none;
   }
+  .btn {
+    animation: none;
+  }
 }
