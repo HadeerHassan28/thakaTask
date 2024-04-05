@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import styles from "./about.module.css";
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
@@ -12,25 +13,26 @@ const About = () => {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <div className="flex gap-8 p-24">
+    <div className="md:flex md:flex-row md:gap-6 md:p-24 xs:flex xs:flex-col xs:p-3 ">
       {/* text */}
-      <div className=" flex  flex-col   justify-around">
-        <motion.h5
-          initial={{ x: 0, y: -50 }}
-          animate={{ x: 0, y: 20 }}
-          exit={{ x: 100, y: 10 }}
-          transition={{ duration: 0.5 }}
-          className="text-title text-lg font-semibold"
+      <div className=" md:flex  md:flex-col   md:justify-around  md:items-start md:gap-1">
+        <h5
+          className={` ${styles.textTitle} text-title font-semibold xs:text-center xs:mb-2 md:text-lg md:text-start`}
         >
           من نحن
-        </motion.h5>
-        <motion.p
-          initial={{ x: -800, y: -30, opacity: 0 }}
-          animate={{ x: 0, y: 10, opacity: 100 }}
-          exit={{ x: -500, y: 10, opacity: 100 }}
-          transition={{ duration: 1 }}
-          className="text-sm font-normal text-mainText  text-justify text "
-          style={{ lineHeight: 2 }}
+        </h5>
+        {/* small screen */}
+        <div className={`md:hidden xs:mb-4`}>
+          <Image
+            src="/about.jpeg"
+            alt="Image"
+            className={`rounded `}
+            width={2100}
+            height={427}
+          />
+        </div>
+        <p
+          className={`text-justify  text-mainText  md:text-sm md:w-auto font-normal xs:w-screen xs:p-0   ${styles.text}`}
         >
           بدأت رحلتنا في «ذكاء لتقنية المعلومات» باتجاه التطور والاكتشاف. لنقود
           الأفكار نحو التطور وتوليد الفرص ونساهم في وضع حلول ابتكارية للتعامل مع
@@ -38,26 +40,25 @@ const About = () => {
           عددٍ من الخدمات المبتكرة والحلول التقنية المتكاملة لصناعة التحول
           الرقمي في أداء القطاعين العام والخاص وللمساهمة في رفع مستوى الخدمات
           بإستخدام تقنية المعلومات
-        </motion.p>
-        <button className="text-primary border p-2 rounded  w-28 shadow-md hover:bg-primary hover:text-white transition duration-300">
-          معرفة المزيد
-        </button>
+        </p>
+        {/* button */}
+        <div
+          className={`xs:flex xs:justify-center md:flex md:justify-start ${styles.btn}`}
+        >
+          <button className="border p-2 rounded w-28 shadow-md md:text-primary md:bg-white   md:hover:bg-primary md:hover:text-white transition duration-300 xs:text-white xs:bg-primary xs:mt-2 flex justify-center">
+            معرفة المزيد
+          </button>
+        </div>
       </div>
       {/* img */}
-      <motion.div
-        initial={{ opacity: 0, x: 0, y: -30 }}
-        exit={{ x: 100, y: 20, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-      >
-        <Image
-          src="/about.jpeg"
-          alt="Image"
-          className="rounded"
-          width={2100}
-          height={427}
-        />
-      </motion.div>
+
+      <Image
+        src="/about.jpeg"
+        alt="Image"
+        className={`rounded ${styles.imgContainer} md:w-1/2`}
+        width={2100}
+        height={427}
+      />
     </div>
   );
 };

@@ -1,0 +1,74 @@
+/* Keyframes for the text animation */
+@keyframes slideInText {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
+/* Keyframes for the paragraph animation */
+@keyframes fadeInParagraph {
+  from {
+    opacity: 0;
+    transform: translateX(-800px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Keyframes for the image animation */
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* for the buttom */
+@keyframes fadeInBtn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    transform: translateY(0);
+  }
+}
+/* Styles for the text */
+.textTitle {
+  animation: slideInText 0.5s forwards;
+}
+
+.text {
+  animation: fadeInParagraph 1s forwards;
+  line-height: 2;
+}
+.btn {
+  animation: fadeInBtn 0.5s forwards;
+}
+/* Styles for the image */
+.imgContainer {
+  animation: fadeInImage 0.5s forwards;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .textTitle {
+    animation: none;
+  }
+
+  .text {
+    animation: none;
+  }
+  .imgContainer {
+    display: none;
+  }
+}
