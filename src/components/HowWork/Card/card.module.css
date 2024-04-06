@@ -1,12 +1,15 @@
 /* Keyframes for the 1st elem */
 @keyframes slideFirstItem {
   0% {
+    opacity: 0;
     transform: translateY(-95px);
   }
   50% {
+    opacity: 0.5;
     transform: translateY(0);
   }
   100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }
@@ -14,12 +17,15 @@
 /* Keyframes for remain ele */
 @keyframes slideRmain {
   0% {
+    opacity: 0;
     transform: translateY(300px);
   }
   50% {
+    opacity: 0.5;
     transform: translateY(0);
   }
   100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }
@@ -35,23 +41,33 @@
     transform: translate(0, 0);
   }
 }
-.Remain {
-  display: none;
+
+/* Keyframes for the fadeOut effect */
+@keyframes fadeOutImage {
+  from {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(200px, -200px);
+  }
 }
+
 /* Styles for the text */
 .FirstTextItem {
-  animation: slideFirstItem 4s forwards infinite;
+  animation: slideFirstItem 5s forwards infinite;
   animation-fill-mode: forwards;
 }
 
 .RemainText {
-  animation: slideRmain 4s forwards infinite;
+  animation: slideRmain 6s forwards infinite;
   animation-fill-mode: forwards;
 }
 
 /* Styles for the image */
 .img {
-  animation: fadeInImage 4s forwards infinite;
+  animation: fadeInImage 6s forwards infinite;
   animation-fill-mode: forwards;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {

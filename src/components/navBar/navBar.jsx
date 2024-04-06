@@ -115,7 +115,7 @@ const NavBar = () => {
 
       {/* translate button in meduin screen */}
       <button
-        className="xs:hidden md:flex  justify-around items-center gap-2  border border-b-secondary border-1 p-2 rounded text-mainText"
+        className="xs:hidden md:flex  justify-around items-center gap-2  border border-b-secondary border-1 p-2 rounded text-secondary"
         style={{ fontSize: "16px", fontWeight: "400" }}
       >
         EN

@@ -1,14 +1,17 @@
 import Image from "next/image";
 import React from "react";
-import { AiOutlineArrowLeft } from "react-icons/ai";
+
 import styles from "./card.module.css";
-const Card = ({ title, desc, img, index }) => {
+
+const Card = ({ title, desc, img, index, animationType }) => {
+  const animationClass =
+    animationType === "fadeIn"
+      ? styles.fadeInImage
+      : animationType === "fadeOut"
+      ? styles.fadeOutImage
+      : "";
   return (
-    <div
-      className={`flex gap-20 justify-between items-center ${
-        index != 1 ? styles.Remain : null
-      }`}
-    >
+    <div className={`flex gap-20 justify-between items-center `} dir="rtl">
       {/* text (title and paragrph)*/}
       <div
         className={`flex flex-col gap-5 items-start justify-center ${
@@ -35,18 +38,8 @@ const Card = ({ title, desc, img, index }) => {
         alt="how working"
         width={400}
         height={400}
-        className={`w-96 ${styles.img}`}
+        className={`w-96 ${styles.img} ${animationClass}`}
       />
-
-      {/* Button */}
-      <button className="rounded-full border-4 border-white border-opacity-50 p-3">
-        <AiOutlineArrowLeft
-          style={{
-            color: "#ffffff",
-            fontSize: "26px",
-          }}
-        />
-      </button>
     </div>
   );
 };
