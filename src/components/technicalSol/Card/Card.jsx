@@ -50,11 +50,12 @@ const Card = ({ title, img, dec }) => {
   return (
     <Slider {...settings}>
       <div
-        className={`flex  gap-1   rounded shadow-md  bg-white xs:p-7  md:p-10 md:w-screen  md:relative ${styles.container}`}
+        className={`flex  gap-1   rounded shadow-md  bg-white xs:p-7  md:p-10   md:relative md:w-screen ${styles.container} `}
         dir="rtl"
       >
+        {/* Img and title */}
         <div
-          className=" flex flex-row gap-2 items-center  justify-center xs:h-20 md:h-20  md:transition-opacity md:duration-300 opacity-100 md:hover:opacity-0"
+          className={`flex flex-row gap-2 items-center  justify-center xs:h-20 md:h-20 md:transition-opacity md:duration-300 opacity-100 md:hover:opacity-0 ${styles.imgTextContainer} `}
           style={{ height: "100%" }}
         >
           {/* img */}
@@ -73,10 +74,9 @@ const Card = ({ title, img, dec }) => {
             {title}
           </h5>
         </div>
-
         {/* desc in meduim screen */}
-        <div className="xs:hidden md:absolute md:bottom-0 md:left-0 md:w-full md:h-full md:flex md:items-center md:justify-center  md:transition-all md:duration-300 md:transform md:translate-x-full md:translate-y-full md:opacity-0 md:hover:opacity-100 md:hover:translate-x-0 md:hover:translate-y-0">
-          <p className="text-mainText text-sm font-normal p-2 rounded">{dec}</p>
+        <div className={`xs:hidden md:flex       ${styles.text} `}>
+          <p className={`text-mainText text-sm font-normal   `}>{dec}</p>
         </div>
       </div>
     </Slider>

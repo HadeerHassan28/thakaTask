@@ -12,7 +12,7 @@ const TechnicalSol = () => {
         يمكننا مساعدتك في تخطيط وتصميم وتطوير أي نوع من المنتجات الرقمية.
       </p>
 
-      <div className="flex  md:gap-4 xs:gap-1 ">
+      <div className="flex  md:gap-4 x md:justify-between md:items-center xs:gap-1 ">
         {techData.map((ele) => (
           <Card title={ele.title} img={ele.img} dec={ele.dec} key={ele.id} />
         ))}
