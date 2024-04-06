@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+
 import styles from "./about.module.css";
+import SmallScreen from "./SmallScreen/SmallScreen";
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
@@ -22,15 +23,7 @@ const About = () => {
           من نحن
         </h5>
         {/* small screen */}
-        <div className={`md:hidden xs:mb-4`}>
-          <Image
-            src="/about.jpeg"
-            alt="Image"
-            className={`rounded `}
-            width={2100}
-            height={427}
-          />
-        </div>
+        <SmallScreen />
         <p
           className={`text-justify  text-mainText  md:text-sm md:w-auto font-normal xs:w-screen xs:p-0   ${styles.text}`}
         >
