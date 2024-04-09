@@ -1,8 +1,72 @@
+"use client";
 import { servicesData } from "@/data/Services";
 import React from "react";
 import LeftSide from "./leftSide/LeftSide";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 const Services = () => {
+  const settings = {
+    speed: 3000,
+    autoplaySpeed: 5000,
+    accessibility: false,
+    arrows: false,
+    vertical: true,
+    verticalSwiping: true,
+    slidesToShow: 4,
+    responsive: [
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 1,
+          autoplay: false,
+          arrows: true,
+          vertical: false,
+          verticalSwiping: false,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          autoplay: false,
+          arrows: true,
+          vertical: false,
+          verticalSwiping: false,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4,
+          autoplay: true,
+          speed: 3000,
+          arrows: false,
+          vertical: true,
+          verticalSwiping: true,
+        },
+      },
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 4,
+          autoplay: true,
+          speed: 3000,
+          arrows: false,
+          vertical: true,
+          verticalSwiping: true,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+          autoplay: true,
+          speed: 3000,
+        },
+      },
+    ],
+  };
   return (
     <div className="md:grid md:grid-cols-6  md:gap-4 md:p-24 xs:mt-5">
       <div className="md:col-span-3 md:flex  md:flex-col   md:justify-around ">
@@ -19,21 +83,23 @@ const Services = () => {
         </p>
 
         {/* buttin */}
-        <button className="md:text-white md:border md:p-2 md:rounded  md:w-28 md:shadow-md md:bg-primary xs:hidden">
+        <button className="md:block md:text-white md:border md:p-2 md:rounded  md:w-28 md:shadow-md md:bg-primary xs:hidden">
           معرفة المزيد
         </button>
       </div>
 
       {/* leftside */}
-      <div className="md:col-span-3">
-        {servicesData.map((ele) => (
-          <LeftSide
-            key={ele.id}
-            title={ele.title}
-            img={ele.img}
-            desc={ele.desc}
-          />
-        ))}
+      <div className="md:col-span-3 ">
+        <Slider {...settings}>
+          {servicesData.map((ele) => (
+            <LeftSide
+              key={ele.id}
+              title={ele.title}
+              img={ele.img}
+              desc={ele.desc}
+            />
+          ))}
+        </Slider>
       </div>
     </div>
   );

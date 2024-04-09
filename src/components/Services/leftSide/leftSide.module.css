@@ -1,9 +1,12 @@
-.text {
+/* .text {
   animation: slideText 1s forwards infinite;
 }
 .title {
   animation: slideTitle 1s forwards infinite;
 }
+.line {
+  animation: slideLine 1s forwards infinite;
+} */
 /* Keyframes for the title */
 @keyframes slideTitle {
   from {
@@ -24,6 +27,16 @@
   }
   to {
     display: block;
+  }
+}
+/* Keyframes for the line */
+@keyframes slideLine {
+  from {
+    color: var(--secondary);
+  }
+  to {
+    color: var(--primary);
+    width: 20%;
   }
 }
 
