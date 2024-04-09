@@ -12,14 +12,17 @@
 }
 .container:hover .text {
   opacity: 1;
-  animation: slideInText 0.5s forwards, slideOutText 0.5s forwards;
+  animation: slideInText 0.5s forwards;
 }
 .container:hover .imgTextContainer {
   display: none;
 }
-/* .text:hover {
-  animation: slideInText 0.5s forwards;
-} */
+.container:not(:hover) .text {
+  animation: slideOutText 0.75s forwards;
+}
+.container:not(:hover) .imgTextContainer {
+  animation: slideOutTextImg 1s forwards;
+}
 
 /* Keyframes for the text animation */
 @keyframes slideInText {
@@ -44,12 +47,28 @@
     transform: translate(-20px, 50px);
   }
 }
+
+/* Keyframes for the text and img animation when hover ends */
+
+@keyframes slideOutTextImg {
+  from {
+    opacity: 0;
+    transform: translate(20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .container {
     height: calc(258px / 2);
     width: calc(288px / 2);
   }
-  .text {
+  .container:hover .text,
+  .container:not(:hover) .text,
+  .container:not(:hover) .imgTextContainer,
+  .container:hover .imgTextContainer {
     animation: none;
   }
 }
