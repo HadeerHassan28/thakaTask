@@ -4,19 +4,28 @@ import LeftSide from "./leftSide/LeftSide";
 
 const Services = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 p-24">
-      <div className="lg:col-span-3 flex  flex-col   justify-around">
-        <h5 className="text-title text-lg font-semibold">خدماتنا</h5>
-        <p className="text-sm font-normal text-mainText   text-justify ">
+    <div className="md:grid md:grid-cols-6  md:gap-4 md:p-24 xs:mt-5">
+      <div className="md:col-span-3 md:flex  md:flex-col   md:justify-around ">
+        {/* title */}
+        <h5 className="text-title text-lg font-semibold xs:text-center md:text-start ">
+          خدماتنا
+        </h5>
+
+        {/* subTitle */}
+        <p className="text-sm font-normal text-mainText   text-justify xs:p-5 ">
           نساعد عملائنا على تبسيط أعمالهم من خلال مجموعة الحلول والخدمات
           والتطبيقات التي تساعد على تسهيل سير وتكامل الأعمال بالإضافة إلى الدعم
           التقني والمتابعة المستمرة.
         </p>
-        <button className="text-white border p-2 rounded  w-28 shadow-md bg-primary">
+
+        {/* buttin */}
+        <button className="md:text-white md:border md:p-2 md:rounded  md:w-28 md:shadow-md md:bg-primary xs:hidden">
           معرفة المزيد
         </button>
       </div>
-      <div className="lg:col-span-3">
+
+      {/* leftside */}
+      <div className="md:col-span-3">
         {servicesData.map((ele) => (
           <LeftSide
             key={ele.id}

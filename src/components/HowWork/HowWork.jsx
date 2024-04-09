@@ -8,6 +8,7 @@ import Slider from "react-slick";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import Image from "next/image";
 import SmallScreen from "./SmallScreen/SmallScreen";
+
 const HowWork = () => {
   const settings = {
     speed: 3000,
@@ -52,7 +53,6 @@ const HowWork = () => {
       },
     ],
   };
-
   const firstElement = howWorkData.find((ele, index) => index === 0);
 
   return (

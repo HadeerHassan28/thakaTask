@@ -25,6 +25,7 @@ module.exports = {
         mainText: "#12151C",
         title: "#28649C",
         bgFooter: "#CCEEEF",
+        lightBlue: "#09B9E1",
       },
 
       animation: {

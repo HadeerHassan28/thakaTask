@@ -1,0 +1,35 @@
+.text {
+  animation: slideText 1s forwards infinite;
+}
+.title {
+  animation: slideTitle 1s forwards infinite;
+}
+/* Keyframes for the title */
+@keyframes slideTitle {
+  from {
+    color: var(--lightBlue);
+    font-size: 18px;
+    font-weight: 400;
+  }
+  to {
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+/* Keyframes for the text */
+@keyframes slideText {
+  from {
+    display: none;
+  }
+  to {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .text,
+  .title {
+    animation: none;
+  }
+}

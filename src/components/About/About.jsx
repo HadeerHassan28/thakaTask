@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-
 import styles from "./about.module.css";
 import SmallScreen from "./SmallScreen/SmallScreen";
 const About = () => {
@@ -14,7 +13,7 @@ const About = () => {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <div className="md:flex md:flex-row md:gap-6 md:p-24 xs:flex xs:flex-col xs:p-3 ">
+    <div className="md:flex md:flex-row md:gap-6 md:p-24 xs:flex xs:flex-col xs:p-5 ">
       {/* text */}
       <div className=" md:flex  md:flex-col   md:justify-around  md:items-start md:gap-1">
         <h5
@@ -25,7 +24,7 @@ const About = () => {
         {/* small screen */}
         <SmallScreen />
         <p
-          className={`text-justify  text-mainText  md:text-sm md:w-auto font-normal xs:w-screen xs:p-0   ${styles.text}`}
+          className={`text-justify  text-mainText  md:text-sm md:w-auto font-normal xs:w-fit xs:p-0   ${styles.text}`}
         >
           بدأت رحلتنا في «ذكاء لتقنية المعلومات» باتجاه التطور والاكتشاف. لنقود
           الأفكار نحو التطور وتوليد الفرص ونساهم في وضع حلول ابتكارية للتعامل مع
