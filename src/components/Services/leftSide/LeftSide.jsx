@@ -5,7 +5,7 @@ import styles from "./leftSide.module.css";
 const LeftSide = ({ title, img, desc }) => {
   return (
     <div
-      className="md:flex md:justify-between md:items-center md:flex-row md:gap-3 xs:border xs:border-secondary xs:p-5 xs:m-3 md:p-0 md:border-none"
+      className="md:flex md:justify-between md:items-center md:flex-row md:gap-3 md:p-0 md:border-none md:shadow-none md:m-0 xs:border xs:border-secondary xs:p-5 xs:m-3 xs:mt-0 xs:h-48 xs:shadow-md "
       dir="rtl"
       style={{ minHeight: "50px" }}
     >
