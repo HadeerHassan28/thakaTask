@@ -1,10 +1,11 @@
 import React from "react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 // Left Arrow
-export default function PreArrow({ sliderRef }) {
+export default function PreArrow({ sliderRef, isTechSol }) {
   const handleClick = () => {
     sliderRef.current.slickPrev();
   };
+
   return (
     <div
       style={{
@@ -15,10 +16,12 @@ export default function PreArrow({ sliderRef }) {
       onClick={handleClick}
     >
       <AiOutlineArrowLeft
-        className="text-secondary absolute  right-48   top-56"
+        className="text-secondary absolute "
         style={{
           fontSize: 25,
           fontWeight: "bolder",
+          top: isTechSol ? "150px" : "224px",
+          right: isTechSol ? "150px" : "192px",
         }}
       />
     </div>

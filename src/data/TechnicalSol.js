@@ -1,30 +1,26 @@
 export const techData = [
   {
     id: 1,
-    img: "/code-laptop.png",
+    img: "/techSol1.svg",
     title: "حلول تطوير البرمجيات",
     dec: "نسعى إلى حلول الويب المبتكرة لتصميم المواقع الإلكترونية بشكل فعال ومتجاوب مع جميع الأجهزة.",
-    animationType: "fadeIn",
   },
   {
     id: 2,
-    img: "/collect-laptop.png",
+    img: "/techSol2.svg",
     title: "التحليل ودراسة تجربة المستخدم",
     dec: "تصميم واجهة المستخدم وتجربة المستخدم وإنشاء النماذج الأولية للتحقق من صحة الأفكار ونقل المنتجات الرقمية إلى السوق بثقة.",
-    animationType: "fadeIn",
   },
   {
     id: 3,
-    img: "/laptop-cloud.png",
+    img: "/techSol3.svg",
     title: "الإستضافة السحابية",
     dec: "تقدم شركة ذكاء الدولية بتقديم خدمات تأجير السيرفرات الخاصة بمواصفات عالية تلبي جميع احتياجات المؤسسات.",
-    animationType: "fadeIn",
   },
   {
     id: 4,
-    img: "/laptop-shield.png",
+    img: "/techSol4.svg",
     title: "حلول الحماية والآمن السيرابني",
     dec: "تمتع بحماية قوية ضد الاختراقات والمخترقين الذين يحاولون تعطيل أعمالك مع حلول ذكاء للأمن السيبراني.",
-    animationType: "fadeOut",
   },
 ];

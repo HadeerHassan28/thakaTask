@@ -9,6 +9,7 @@ import NextArrow from "../Arrows/NextArrow";
 import PreArrow from "../Arrows/PreArrow";
 const Services = () => {
   const sliderRef = useRef(null);
+
   const settings = {
     speed: 3000,
     autoplaySpeed: 5000,
@@ -24,7 +25,6 @@ const Services = () => {
         settings: {
           slidesToShow: 1,
           autoplay: false,
-          // arrows: true,
           vertical: false,
           verticalSwiping: false,
           nextArrow: <NextArrow sliderRef={sliderRef} />,
