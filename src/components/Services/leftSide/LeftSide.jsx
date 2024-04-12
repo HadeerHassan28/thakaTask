@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import styles from "./leftSide.module.css";
 
-const LeftSide = ({ title, img, desc }) => {
+const LeftSide = ({ title, img, desc, index }) => {
   return (
     <div
       className="md:flex md:justify-between md:items-center md:flex-row md:gap-3 md:p-0 md:border-none md:shadow-none md:m-0 xs:border xs:border-secondary xs:p-5 xs:m-3 xs:mt-0 xs:h-48 xs:shadow-md "
@@ -12,7 +12,7 @@ const LeftSide = ({ title, img, desc }) => {
       {/* img */}
       <Image
         src={img}
-        className="xs:w-10 md:w-16"
+        className={`xs:w-10 md:w-16 ${styles.img}`}
         width={66.67}
         height={66.67}
       />
@@ -25,7 +25,10 @@ const LeftSide = ({ title, img, desc }) => {
       {/* text Container */}
       <div className="md:flex md:flex-col md:gap-1 md:mt-3 ">
         {/* title */}
-        <h6 className={`text-start text-lightBlue   w-fit  ${styles.title}`}>
+        <h6
+          className={`text-start text-lightBlue   w-fit  ${styles.title}`}
+          style={{ animationDelay: `${index * 20}s` }}
+        >
           {title}
         </h6>
         {/* desc */}
