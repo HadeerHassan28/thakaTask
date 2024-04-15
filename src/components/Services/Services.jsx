@@ -1,6 +1,6 @@
 "use client";
 import { servicesData } from "@/data/Services";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import LeftSide from "./leftSide/LeftSide";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,17 +9,19 @@ import NextArrow from "../Arrows/NextArrow";
 import PreArrow from "../Arrows/PreArrow";
 import RightSide from "./rightSide/rightSide";
 const Services = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
   const sliderRef = useRef(null);
 
   const settings = {
-    speed: 3000,
-    autoplaySpeed: 5000,
+    speed: 2900,
+    autoplaySpeed: 2900,
     accessibility: false,
     arrows: false,
     vertical: true,
     verticalSwiping: true,
     slidesToShow: 4,
     ref: sliderRef,
+    afterChange: (current) => setCurrentSlide(current),
     responsive: [
       {
         breakpoint: 320,
@@ -48,6 +50,7 @@ const Services = () => {
         breakpoint: 768,
         settings: {
           slidesToShow: 4,
+          slidesToScroll: 1,
           autoplay: true,
           speed: 3000,
           arrows: false,
@@ -59,6 +62,7 @@ const Services = () => {
         breakpoint: 960,
         settings: {
           slidesToShow: 4,
+          slidesToScroll: 1,
           autoplay: true,
           speed: 3000,
           arrows: false,
@@ -70,6 +74,7 @@ const Services = () => {
         breakpoint: 1200,
         settings: {
           slidesToShow: 4,
+          slidesToScroll: 1,
           autoplay: true,
           speed: 3000,
         },
@@ -84,7 +89,7 @@ const Services = () => {
 
       {/* leftside */}
       <div className="md:col-span-3  ">
-        <Slider {...settings}>
+        <Slider {...settings} initialSlide={currentSlide}>
           {servicesData.map((ele) => (
             <LeftSide
               key={ele.id}
@@ -92,6 +97,7 @@ const Services = () => {
               img={ele.img}
               desc={ele.desc}
               index={ele.id}
+              currentSlide={currentSlide}
             />
           ))}
         </Slider>

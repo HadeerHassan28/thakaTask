@@ -1,52 +1,50 @@
-.text,
-.img {
-  display: none;
-  animation: slideText 3s linear infinite alternate;
-  animation-delay: 0.5s;
-}
+/* .img {
+  opacity: 0;
+  visibility: none;
+  animation-name: slideText linear;
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+} */
 
-.title {
-  animation: slideTitle 3s linear infinite alternate;
-}
-.line {
-  animation: slideLine 2s forwards infinite;
-}
-/* Keyframes for the title */
-@keyframes slideTitle {
+/* Keyframes for the img  */
+@keyframes slideImg {
   from {
-    color: var(--lightBlue);
-    font-size: 18px;
-    font-weight: 400;
+    opacity: 0;
+    /* visibility: none;
+    transform: translateY(-10px); */
   }
   to {
-    color: var(--primary);
-    font-size: 25px;
-    font-weight: 400;
-  }
-}
-/* Keyframes for the text and img */
-@keyframes slideText {
-  from {
-    display: none;
-  }
-  to {
-    display: block;
+    opacity: 1;
+    /* visibility: visible;
+    transform: translateY(0); */
   }
 }
 /* Keyframes for the line */
-@keyframes slideLine {
+/* @keyframes slideLine {
   from {
     color: var(--secondary);
+    width: 0.25%;
   }
   to {
     color: var(--primary);
     width: 0.5%;
   }
 }
-
+@keyframes slideAnimation {
+  0% {
+    display: none;
+  }
+  50% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .text,
   .title {
     animation: none;
   }
-}
+} */
